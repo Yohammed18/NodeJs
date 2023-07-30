@@ -16,10 +16,18 @@ inquirer
     },
 ])
 .then((answers) => {
-    console.log(answers.name)
+    //this will store the url insterted by the user
     const url = answers.URL;
+    //this will conver the url into a qr code
     var qr_svg = qr.image(url);
+    //this code will store the qr code in a png file
     qr_svg.pipe(fs.createWriteStream('qr_img.png'));
+
+    //save user input in a text file
+    fs.writeFile("user_input.txt", url,(err)=>{
+        if(err) throw err;
+        console.log("The file has been saved!")
+    })
 })
   .catch((error) => {
     if (error.isTtyError) {
@@ -28,5 +36,3 @@ inquirer
       // Something else went wrong
     }
   });
-
-  //qr-image
