@@ -8,6 +8,8 @@ console.log(global)
 //CommonJS uses a require() statement, ES6 uses the imports statement but they basically do the same thing
 const os = require('os')
 const path = require('path')
+//imports the functions or variables from the class we created or we can deconstruct
+const {add, sub, div, mul} = require('./math')
 console.log(os.type())
 console.log(os.version())
 console.log(os.homedir())
@@ -21,4 +23,8 @@ console.log(`File ext: ${path.extname(__filename)}`)
 
 console.log(path.parse(__filename))
 
-
+//
+console.log(add(3,2))
+console.log(sub(3,2))
+console.log(mul(3,2))
+console.log(div(3,2))

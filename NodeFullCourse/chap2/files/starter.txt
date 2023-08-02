@@ -1,0 +1,3 @@
+Pneumonoultramicroscopicsilicovolcanoconiosis is The longest English word. This word is forty-five letters long and refers to a type of lung disease.
+
+We are appending to the starter.txt file.
