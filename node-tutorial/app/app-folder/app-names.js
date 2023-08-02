@@ -1,3 +1,5 @@
+
+//export variables and function via the module.exports{}
 const firstName = "Michael Jordan"
 const secondName = "Lebron James"
 const thirdName = "Kobe Bryant"
