@@ -1,21 +1,18 @@
 const logEvents = require('./logEvents')
-
-
 const EventEmitter = require('events')
 
-
 class MyEmitter extends EventEmitter{
-
+    //emit is used to trigger an event
+    //on is used to add a callback function that's going to be executed when the event is triggered
 }
 
-
 //initialize object
-const myEmmiter = new MyEmitter();
+const emitter = new MyEmitter();
 
 //add a listenr for the log event
-myEmmiter.on('log', (msg)=> logEvents(msg));
+emitter.on('log', (msg)=> logEvents(msg));
 
 setTimeout(() =>{
     //emit event
-    myEmmiter.emit('log','Log event emitted!\n')
+    emitter.emit('log','Log event emitted!\n')
 }, 2000)
