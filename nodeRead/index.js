@@ -3,8 +3,7 @@ const fs = require('fs');
 
 fs.readFile('./readmessage.txt','utf-8',(err,data)=>{
     if(err){
-        console.log(err);
-        return;
+        throw err
     }
     console.log(data)
 })
